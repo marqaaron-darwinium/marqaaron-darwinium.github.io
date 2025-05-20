@@ -1,5 +1,5 @@
-import api from './serverRequests.js';
-import config from './siteConfig.js';
+import api from './core.server-request.js';
+import config from './core.site-config.js';
 document.getElementById("loginForm").addEventListener('submit', function (event) {
     event.preventDefault();
     const email = document.getElementById("usernameInput").value;

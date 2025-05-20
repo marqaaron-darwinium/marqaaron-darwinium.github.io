@@ -1,4 +1,4 @@
-import serverRequestsErrors from "./serverRequestErrors.js";
+import serverRequestsErrors from "./core.server-request-errors.js";
 const fetchRequest = function(_url,_body,_withCredentials,_requestName){
     return new Promise((resolve,reject)=>{
         let init = {
