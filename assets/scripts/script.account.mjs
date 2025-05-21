@@ -2,6 +2,9 @@ import coreServerRequest from "./core.server-request.js";
 import coreSiteConfig from "./core.site-config.js";
 import coreLocalStorageValues from "./core.local-storage-values.js";
 import coreToasts from "./core.toasts.js";
+document.addEventListener("DOMContentLoaded", function (event) {
+    document.title = "Ignotus Analytics: Account";
+})
 document.getElementById("logoutButton").addEventListener('click', function (event) {
     event.preventDefault();
     const email = coreLocalStorageValues.getKey('authenticatedUser');

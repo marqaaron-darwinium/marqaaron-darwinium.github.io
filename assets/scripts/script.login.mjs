@@ -2,6 +2,9 @@ import coreServerRequest from "./core.server-request.js";
 import coreSiteConfig from "./core.site-config.js";
 import coreLocalStorageValues from "./core.local-storage-values.js";
 import coreToasts from "./core.toasts.js";
+document.addEventListener("DOMContentLoaded", function (event) {
+    document.title = "Ignotus Analytics: Login";
+})
 document.getElementById("loginForm").addEventListener('submit', function (event) {
     event.preventDefault();
     const email = document.getElementById("usernameInput").value;
