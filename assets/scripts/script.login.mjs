@@ -35,6 +35,9 @@ document.getElementById("loginForm").addEventListener('submit', function (event)
     }
     coreServerRequest.postWithoutCreds(coreSiteConfig.apiUrl,postPayload,"login-submit").then(
         (response) => {
+            const responseOutputContent = document.getElementById("responseOutput");
+            responseOutputContent.textContent = JSON.stringify(response.body, null, 2);
+            responseOutputContent.style.display = "block";
             if(response.statusCode === 200){
                 coreLocalStorageValues.setLocal('isAuthenticated',true)
                 coreLocalStorageValues.setLocal('authenticatedUser',email)
