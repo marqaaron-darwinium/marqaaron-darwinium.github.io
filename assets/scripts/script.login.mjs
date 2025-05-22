@@ -10,7 +10,7 @@ document.getElementById("loginForm").addEventListener('submit', function (event)
     const email = document.getElementById("usernameInput").value;
     const password = document.getElementById("passwordInput").value;
     const selectedLoginType = document.querySelector('input[name="loginType"]:checked').value;
-    const enabledRedirect = document.querySelector('input[name="enableRedirect"]:checked').value;
+    const enabledRedirect = document.getElementById("enableRedirect").value;
     let postPayload = {
         type: "login-submit",
         data: {
