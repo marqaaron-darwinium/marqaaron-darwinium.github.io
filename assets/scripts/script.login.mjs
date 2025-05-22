@@ -10,6 +10,7 @@ document.getElementById("loginForm").addEventListener('submit', function (event)
     const email = document.getElementById("usernameInput").value;
     const password = document.getElementById("passwordInput").value;
     const selectedLoginType = document.querySelector('input[name="loginType"]:checked').value;
+    const enabledRedirect = document.querySelector('input[name="enableRedirect"]:checked').value;
     let postPayload = {
         type: "login-submit",
         data: {
@@ -38,9 +39,11 @@ document.getElementById("loginForm").addEventListener('submit', function (event)
                 coreLocalStorageValues.setLocal('isAuthenticated',true)
                 coreLocalStorageValues.setLocal('authenticatedUser',email)
                 coreToasts.toastWithColor('Login Successful!','green')
-                setTimeout(()=>{
-                    window.location.href = '/account';
-                },2000)
+                if(enabledRedirect === true){
+                    setTimeout(()=>{
+                        window.location.href = '/account';
+                    },2000)
+                }
             } else {
                 coreLocalStorageValues.deleteLocal('isAuthenticated');
                 coreLocalStorageValues.deleteLocal('authenticatedUser');
