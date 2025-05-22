@@ -43,8 +43,7 @@ document.getElementById("loginForm").addEventListener('submit', function (event)
                 coreLocalStorageValues.setLocal('isAuthenticated',true)
                 coreLocalStorageValues.setLocal('authenticatedUser',email)
                 coreToasts.toastWithColor('Login Successful!','green')
-                console.log('enabledRedirect', enabledRedirect)
-                if(enabledRedirect === 'true'){
+                if(enabledRedirect.checked){
                     setTimeout(()=>{
                         window.location.href = '/account';
                     },2000)

@@ -1,4 +1,4 @@
 export default {
-    apiUrl: 'https://www.ignotusanalytics.com/api/echo',
-    baseUrl: 'https://www.ignotusanalytics.com'
+    apiUrl: 'https://ignotusanalytics.com/api/echo',
+    baseUrl: 'https://ignotusanalytics.com'
 }
